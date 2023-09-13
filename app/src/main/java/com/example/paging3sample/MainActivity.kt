@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
+/**
+ * 参考郭霖博客: 写的太好了
+ * https://guolin.blog.csdn.net/article/details/114707250?spm=1001.2014.3001.5502
+ */
 class MainActivity : AppCompatActivity() {
 
     private val viewModel by lazy { ViewModelProvider(this).get(MainViewModel::class.java) }

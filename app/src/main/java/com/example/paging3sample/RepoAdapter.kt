@@ -14,11 +14,11 @@ class RepoAdapter : PagingDataAdapter<Repo, RepoAdapter.ViewHolder>(COMPARATOR) 
     companion object {
         private val COMPARATOR = object : DiffUtil.ItemCallback<Repo>() {
             override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {
-                return oldItem.id == newItem.id
+                return oldItem == newItem
             }
 
             override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
-                return oldItem == newItem
+                return oldItem.id == newItem.id
             }
         }
     }
